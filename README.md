@@ -77,7 +77,7 @@ The script automates the process of:
      ```
 4. **Run the Script**: Execute the script in PowerShell:
    ```powershell
-   .\user_account_check.ps1
+   .\ComboListChecking-PS-MG-Final.ps1
 
 ---
 ## **Example Input and Output**
