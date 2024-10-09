@@ -1,1 +1,1 @@
-# PowerShell-BlueTeam-User-Account-Verification-
+# PowerShell-BlueTeam-User-Account-Verification
