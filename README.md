@@ -78,3 +78,15 @@ The script automates the process of:
 4. **Run the Script**: Execute the script in PowerShell:
    ```powershell
    .\user_account_check.ps1
+
+---
+## **Example Input and Output**
+
+### **CSV Input Example**:
+The input file for the script is a CSV that contains a list of email addresses to check in Azure AD and Exchange Online. The CSV must have a column header named `EmailAddress`. An example format is shown below:
+
+```csv
+EmailAddress
+john.doe@example.com
+jane.smith@example.com
+mike.adams@example.com
