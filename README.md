@@ -13,10 +13,8 @@
 3. [Script Overview](#script-overview)
 4. [Usage Instructions](#usage-instructions)
 5. [Example Input and Output](#example-input-and-output)
-6. [Error Handling](#error-handling)
-7. [Performance and Execution Time](#performance-and-execution-time)
-8. [Troubleshooting](#troubleshooting)
-9. [Contact Information](#contact-information)
+6. [Troubleshooting and Error Handling](#troubleshooting-and-error-handling)
+
 
 ---
 
@@ -72,7 +70,7 @@ The script performs the process of:
      ```powershell
      $inputFilePath = "C:\Path\To\Input\user_accounts.csv"
      $outputFilePath = "C:\Path\To\Output\results_$timestamp.csv"
-     ```
+   ###
 4. **Run the Script**: Execute the script in PowerShell:
    ```powershell
    ./ComboListChecking-PS-MG-Final.ps1
@@ -88,3 +86,75 @@ EmailAddress
 john.doe@example.com
 jane.smith@example.com
 mike.adams@example.com
+ ```
+
+### **CVS Output Example**
+After running the script, the results will be exported to a CSV file. Below is a sample of what the output might look like in the generated CSV, displayed here as a table for clarity:
+
+| DisplayName     | EmailAddress           | AccountStatus | JobTitle         | Department     | CreationDateTime     | ObjectUserID                         |
+|-----------------|------------------------|---------------|------------------|----------------|----------------------|--------------------------------------|
+| John Doe        | john.doe@example.com    | Active        | IT Manager       | Information Tech | 2022-06-01T10:15:00  | 2c63bff1-4a55-4893-b635-0a285c567e34|
+| Jane Smith      | jane.smith@example.com  | Disabled      | Marketing Lead   | Marketing       | 2020-09-12T08:30:00  | 5b75cdd2-6d45-411a-9c8f-8a29a1c7de93|
+| Emily Johnson   | emily.johnson@example.com| Active        | Data Analyst     | Finance         | 2021-03-21T14:22:00  | 9d8c8f3f-1a57-48e5-a3b9-0d2d676e1de7|
+| Michael Brown   | michael.brown@example.com| Active        | HR Specialist    | Human Resources | 2019-11-05T09:12:00  | 6f85bb54-2c23-45e1-9e5c-0d3c90ff547f|
+| Sarah Williams  | sarah.williams@example.com| Disabled     | Sales Director   | Sales           | 2018-07-17T16:05:00  | 4d35c9a2-4f19-422d-995e-7f40d129f923|
+
+### Explanation of Fields
+
+- **DisplayName**: The full name of the user from Azure AD.
+- **EmailAddress**: The email address of the user, as provided in the input CSV.
+- **AccountStatus**: Indicates whether the account is `Active` or `Disabled` in Azure AD.
+- **JobTitle**: The job title of the user in Azure AD.
+- **Department**: The department the user is associated with in Azure AD.
+- **CreationDateTime**: The date and time when the account was created in Azure AD.
+- **ObjectUserID**: The unique Object ID of the user in Azure AD.
+
+---
+The output file is named with a timestamp and saved in the format:
+
+```bash
+results_YYYYMMDD_HHmmss.csv
+```
+
+## **Troubleshooting and Error Handling**
+
+The script includes error-handling mechanisms to ensure smooth execution even when issues arise. Here's how errors are managed:
+
+1. **Module Installation Errors**:
+   - If required modules (`AzureAD` and `ExchangeOnlineManagement`) are not installed, the script attempts to install them. If the installation fails, an error message will appear, and the script will stop execution.
+   
+   - To prevent this, ensure you have administrative rights and an active internet connection when running the script for the first time.
+
+2. **Silent Error Handling**:
+   - When looking up user accounts or mailboxes, the script uses the `-ErrorAction SilentlyContinue` flag. This means that if a specific lookup fails (e.g., if a mailbox or user does not exist), the script will continue processing the remaining accounts without stopping or displaying an error in the console.
+
+3. **Missing Accounts**:
+   - If a user account or mailbox is not found, the script will simply skip that entry and continue. 
+   
+   - At the end of execution, the script will indicate how many valid user accounts were found and processed. If no accounts were found, the following message will be displayed:
+     ```powershell
+     "No account was found!"
+     ```
+
+4. **Connection Errors**:
+   - If the script cannot connect to **Azure AD** or **Exchange Online** (due to incorrect credentials, network issues, or permission problems), it will display an error message and terminate the session. 
+   
+   - Make sure you have the proper administrative permissions for Azure AD and Exchange Online to avoid this issue.
+
+5. **Invalid CSV File Format**:
+   - If the input CSV file is not correctly formatted (i.e., if the first column is not named `EmailAddress`), the script will not be able to process the accounts.
+   
+   - To prevent this, ensure the CSV file conforms to the expected format as described in the [CSV Input Format](#cvs-input-example) section.
+
+## Contributing
+
+Contributions to improve the script are welcome. Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Disclaimer
+
+This script is provided as-is, without any warranties. Always test in a non-production environment before using in production.
+
