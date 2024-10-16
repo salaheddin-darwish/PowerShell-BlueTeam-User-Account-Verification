@@ -51,9 +51,7 @@ Before running this script, ensure that the following requirements are met:
 
 ## **Script Overview**
 
-### **Aim**
-
-The script automates the process of:
+The script performs the process of:
 1. **Installing Required Modules**: If `ExchangeOnlineManagement` or `AzureAD` are not installed, the script will automatically install them.
 2. **Connecting to Azure AD and Exchange Online**: Establishes a connection to both services.
 3. **User Account Verification**: Loops through each email in the CSV and checks:
@@ -77,7 +75,7 @@ The script automates the process of:
      ```
 4. **Run the Script**: Execute the script in PowerShell:
    ```powershell
-   .\ComboListChecking-PS-MG-Final.ps1
+   ./ComboListChecking-PS-MG-Final.ps1
 
 ---
 ## **Example Input and Output**
