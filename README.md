@@ -1,8 +1,20 @@
-# **User Account Check and Verification Script**
+<p align="center">
+  <img src="https://github.com/PowerShell/PowerShell/raw/master/assets/Powershell_256.png" width="100" alt="project-logo">
+</p>
 
+<p align="center">
+    <h1 align="center">User Account Verification</h1>
+</p
+<p align="center">
+    <em>Checking user accounts with PowerShell </em>
+</p>
 
-**Date**: 09 October 2024  
-**Author**: Salaheddin Darwish  
+ <p align="center">
+	<img src="https://img.shields.io/github/license/DownWithUp/CallMon?style=flat&logo=opensourceinitiative&logoColor=white&color=lightgrey" alt="license">
+	<img src="https://img.shields.io/github/last-commit/DownWithUp/CallMon?style=flat&logo=git&logoColor=white&color=lightgrey" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/DownWithUp/CallMon?style=flat&color=lightgrey" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/DownWithUp/CallMon?style=flat&color=lightgrey" alt="repo-language-count">
+<p>
 
 ---
 
@@ -14,6 +26,8 @@
 4. [Usage Instructions](#usage-instructions)
 5. [Example Input and Output](#example-input-and-output)
 6. [Troubleshooting and Error Handling](#troubleshooting-and-error-handling)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 
 ---
