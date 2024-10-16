@@ -179,9 +179,6 @@ Contributions to improve the script are welcome. Please feel free to submit a Pu
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-## Disclaimer
-
-This script is provided as-is, without any warranties. Always test in a non-production environment before using it in production.
 ## Notes
 The script **ComboListChecking-PS-AzureAD-ExchOnline-FinalVer.ps1** in the repository is developed to demonstrate and test the fundamental approach for connecting to Azure AD and ExchangeOnline before utilising the capabilities of the MS Graph tool. 
 
