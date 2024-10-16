@@ -5,8 +5,9 @@
 <p align="center">
     <h1 align="center">User Account Verification</h1>
 </p
+</p> 
 <p align="center">
-    <em>Checking user accounts with PowerShell </em>
+    <em *align="center">Checking user accounts with PowerShell </em>
 </p>
 
  <p align="center">
@@ -99,7 +100,10 @@ The input file for the script is a CSV that contains a list of email addresses t
 EmailAddress
 john.doe@example.com
 jane.smith@example.com
-mike.adams@example.com
+michael.brown@example.com
+emily.johnson@example.co
+sue.karmen@example.com
+sarah.williams@example.com
  ```
 
 ### **CVS Output Example**
