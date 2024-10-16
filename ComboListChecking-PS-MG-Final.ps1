@@ -40,10 +40,10 @@ $executionTime = Measure-Command {
     $account_counter = 0 
 
     # Path to the CSV source file with email addresses
-    $inputFilePath = "C:\localpath\user_accounts.csv"
+    $inputFilePath = "C:\Path\To\Input\user_accounts.csv"
 
     # Path for output file
-    $outputFilePath = "C:\localpath\results_$timestamp.csv"
+    $outputFilePath = "C:\Path\To\Output\results_$timestamp.csv"
 
     
     # Import the list of emails from the CSV file (ensure the first column is named "EmailAddress")
