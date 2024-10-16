@@ -22,7 +22,7 @@
 
 ## **Introduction**
 
-This PowerShell script is designed to streamline the process of checking user accounts in **Azure Active Directory (Azure AD)** and **Exchange Online**. It takes a list of email addresses from a CSV file, checks whether each email corresponds to an existing user mailbox in Exchange Online, retrieves relevant information from Azure AD, and exports the results to a CSV file for further analysis.
+This PowerShell script is designed to streamline the process of checking user accounts in **Azure Active Directory (Azure AD)** and **Exchange Online**. It takes a list of email addresses from a CSV file, a combo list of compromised accounts provided by security vendors. Then, the script checks whether each email corresponds to an existing user mailbox in Exchange Online, retrieves relevant information from Azure AD, and exports the results to a CSV file for further analysis.
 
 This is part of a security audit to verify potentially compromised accounts and to retrieve important account details such as account status, creation date, and job title.
 
