@@ -10,11 +10,12 @@
     <em *align="center">Checking user accounts with PowerShell </em>
 </p>
 
- <p align="center">
-	<img src="https://img.shields.io/github/license/DownWithUp/CallMon?style=flat&logo=opensourceinitiative&logoColor=white&color=lightgrey" alt="license">
-	<img src="https://img.shields.io/github/last-commit/DownWithUp/CallMon?style=flat&logo=git&logoColor=white&color=lightgrey" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/DownWithUp/CallMon?style=flat&color=lightgrey" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/DownWithUp/CallMon?style=flat&color=lightgrey" alt="repo-language-count">
+
+<p align="center">
+	<img src="https://img.shields.io/github/license/eli64s/readme-ai?style=flat&logo=opensourceinitiative&logoColor=white&color=60A5FA" alt="license">
+	<img src="https://img.shields.io/github/last-commit/DownWithUp/CallMon?style=flat&logo=git&logoColor=white&color=60A5FA" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/DownWithUp/CallMon?style=flat&color=60A5FA" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/DownWithUp/CallMon?style=flat&color=60A5FA" alt="repo-language-count">
 <p>
 
 ---
