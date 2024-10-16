@@ -91,13 +91,15 @@ mike.adams@example.com
 ### **CVS Output Example**
 After running the script, the results will be exported to a CSV file. Below is a sample of what the output might look like in the generated CSV, displayed here as a table for clarity:
 
-| DisplayName     | EmailAddress           | AccountStatus | JobTitle         | Department     | CreationDateTime     | ObjectUserID                         |
-|-----------------|------------------------|---------------|------------------|----------------|----------------------|--------------------------------------|
-| John Doe        | john.doe@example.com    | Active        | IT Manager       | Information Tech | 2022-06-01T10:15:00  | 2c63bff1-4a55-4893-b635-0a285c567e34|
-| Jane Smith      | jane.smith@example.com  | Disabled      | Marketing Lead   | Marketing       | 2020-09-12T08:30:00  | 5b75cdd2-6d45-411a-9c8f-8a29a1c7de93|
-| Emily Johnson   | emily.johnson@example.com| Active        | Data Analyst     | Finance         | 2021-03-21T14:22:00  | 9d8c8f3f-1a57-48e5-a3b9-0d2d676e1de7|
-| Michael Brown   | michael.brown@example.com| Active        | HR Specialist    | Human Resources | 2019-11-05T09:12:00  | 6f85bb54-2c23-45e1-9e5c-0d3c90ff547f|
-| Sarah Williams  | sarah.williams@example.com| Disabled     | Sales Director   | Sales           | 2018-07-17T16:05:00  | 4d35c9a2-4f19-422d-995e-7f40d129f923|
+After running the script, the results will be exported to a CSV file. Below is a sample of what the output might look like in the generated CSV, displayed here as a table for clarity:
+
+| DisplayName     | EmailAddress           | AccountStatus | JobTitle         | Department     | CreationDateTime     | LastPasswordChangeTime | UserRiskLevel | ObjectUserID                         |
+|-----------------|------------------------|---------------|------------------|----------------|----------------------|------------------------|---------------|--------------------------------------|
+| John Doe        | john.doe@example.com    | Active        | IT Manager       | Information Tech | 2022-06-01T10:15:00  | 2023-07-20T08:32:00     | Low           | 2c63bff1-4a55-4893-b635-0a285c567e34|
+| Jane Smith      | jane.smith@example.com  | Disabled      | Marketing Lead   | Marketing       | 2020-09-12T08:30:00  | 2021-08-15T10:22:00     | High          | 5b75cdd2-6d45-411a-9c8f-8a29a1c7de93|
+| Emily Johnson   | emily.johnson@example.com| Active        | Data Analyst     | Finance         | 2021-03-21T14:22:00  | 2023-05-17T12:48:00     | Medium        | 9d8c8f3f-1a57-48e5-a3b9-0d2d676e1de7|
+| Michael Brown   | michael.brown@example.com| Active        | HR Specialist    | Human Resources | 2019-11-05T09:12:00  | 2023-01-09T09:15:00     | No Risk       | 6f85bb54-2c23-45e1-9e5c-0d3c90ff547f|
+| Sarah Williams  | sarah.williams@example.com| Disabled     | Sales Director   | Sales           | 2018-07-17T16:05:00  | 2022-09-12T14:50:00     | High          | 4d35c9a2-4f19-422d-995e-7f40d129f923|
 
 ### Explanation of Fields
 
@@ -107,7 +109,10 @@ After running the script, the results will be exported to a CSV file. Below is a
 - **JobTitle**: The job title of the user in Azure AD.
 - **Department**: The department the user is associated with in Azure AD.
 - **CreationDateTime**: The date and time when the account was created in Azure AD.
+- **LastPasswordChangeTime**: The date and time of the last password change by the user.
+- **UserRiskLevel**: The current risk level of the user account (`Low`, `Medium`, `High`).
 - **ObjectUserID**: The unique Object ID of the user in Azure AD.
+
 
 ---
 The output file is named with a timestamp and saved in the format:
